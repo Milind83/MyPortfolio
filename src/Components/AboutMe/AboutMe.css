@@ -1,0 +1,41 @@
+#about{
+    height: auto;
+    background-color: #0d141c;
+}
+.about {
+    margin: auto 8rem;
+    border-top: 2px solid #f5f5f5;
+}
+.about_heading h2{
+    width: 80%;
+    /* margin: auto 10rem; */
+    font-size: 5rem;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1.6fr 2fr;
+    gap: 20px;
+}
+.container_image{
+
+}
+.about-container{
+    /* margin: auto 10rem; */
+    display: grid;
+}
+
+@media (max-width: 768px) {
+    .about {
+        margin: auto 2rem;
+        border-top: 2px solid #f5f5f5;
+    }
+.about_heading h2 {
+    width: 80%;
+    margin: auto 0rem;
+    font-size: 4rem;
+}
+.about-container {
+    margin: auto 0rem;
+    display: grid;
+}
+}

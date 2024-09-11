@@ -1,0 +1,276 @@
+/* App.css */
+
+/* Define CSS custom properties (variables) */
+:root {
+    --multiplier: 1;
+    --base-font-size: calc(1.8rem * var(--multiplier));
+    --space: calc(1.2rem * var(--multiplier));
+    --header-height: 5px;
+    --logo-width: 60px;
+    --shadow-offset: 4px;
+    --shadow-blur: 6px;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --inset-shadow-color: rgba(255, 255, 255, 0.2);
+    --gutter: 2.2rem;
+    --width-full     : 100%;
+    --width-max      : 1200px;
+    --width-wide     : 1400px;
+    --width-wider    : 1600px;
+    --width-widest   : 1800px;
+    --width-narrow   : 1000px;
+    --width-narrower : 800px;
+    --width-grid-max : var(--width-max);
+    --vspace-1_25: calc(1.25* var(--space));
+}
+
+.header {
+    /* Transparent background */
+    color: #f8f8f8;
+    /* Off-white font color */
+    padding: 20px;
+    text-align: center;
+    font-size: var(--base-font-size);
+    /* Use custom font size */
+    font-weight: bold;
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    position: relative;
+    top: calc(var(--space));
+    /* Add extra space above */
+    left: 0;
+    width: 100%;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
+    z-index: -1;
+    /* Place it behind the header content */
+}
+.row {
+    width     : 92%;
+    max-width : var(--width-grid-max);
+    margin    : 0 auto;
+    display   : flex;
+    flex-flow : row wrap;
+}
+.header__inner {
+    align-items: center;
+    padding: 0 var(--gutter);
+}
+
+.header__logo img {
+    width: var(--logo-width);
+    margin: 0;
+    vertical-align: bottom;
+}
+.header-desktop{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 5rem;
+}
+.header-desktop li a{
+    color: #a7a7a7;
+    text-decoration: none
+}
+.header-desktop li .active{
+    color:#f8f8f8
+}
+
+.header__nav {
+    margin-left : var(--vspace-1_25);
+}
+
+.header__nav ul {
+    list-style : none;
+    display    : inline-flex;
+    flex-flow  : row nowrap;
+    margin     : 0;
+    padding    : 0;
+}
+
+.header__nav li {
+    padding-left : 0;
+}
+ 
+.header__nav a {
+    display             : block;
+    font-size           : 1.6rem;
+    font-weight         : 400;
+    line-height         : var(--header-height);
+    color               : rgba(255, 255, 255, 0.6);
+    padding             : 0 1.2rem;
+    transition-property : color, background-color;
+    text-decoration: none;
+}
+.header__nav .current a {
+    color : white;
+}
+.header__nav .current :hover {
+    transition-property : color, background-color;
+    text-decoration: none;
+}
+
+.header__cta {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
+    margin-left: auto;
+    padding: 5px 10px;
+    border: 1px solid ;
+}
+.header__cta a{
+    /* -webkit-text-stroke: 1px #fff; */
+    /* color: transparent; */
+    color : white;
+    text-decoration: none;
+}
+
+.header__hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+  }
+  
+  .header__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background: #0f131c;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .header__nav.open {
+    transform: translateX(0);
+  }
+  .nav-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+    width: 20rem;
+    left: 1rem;
+    gap: 0px;
+}
+.header-nav {
+    /* display: flex; */
+    flex-direction: row;
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 4px;
+}
+  .header__nav .header__close {
+    /* position: absolute;
+    top: 20px;
+    right: 20px; */
+    font-size: 36px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header__nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 60px 0 0 0;
+  }
+  
+  .header__nav li {
+    padding: 15px 0;
+  }
+  
+  .header__nav a {
+    /* color: white; */
+    font-size: 24px;
+    text-decoration: none;
+  }
+  .header__nav .resume {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .header__nav a:hover {
+    text-decoration: none;
+    color: #f8f8f8;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header {
+        color: #f8f8f8;
+        padding: 0px !important;
+        text-align: center;
+        font-size: var(--base-font-size);
+        font-weight: bold;
+        border-radius: 8px;
+        position: relative;
+        top: calc(var(--space));
+        left: 0;
+        width: 100%;
+    }
+    .header__inner {
+        align-items: center;
+        padding: 0 var(--gutter);
+        width: -webkit-fill-available;
+        justify-content: space-between;
+    }
+    .header__logo {
+      display: flex;
+      justify-content: center;
+    }
+    .header-desktop{
+        display: none;
+    }
+    .header-mobile li a{
+        color: #a7a7a7;
+    }
+    .header-mobile li .active{
+        color:#f8f8f8;
+        text-decoration: none
+    }
+    .header__nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 6rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+  
+    .header__cta {
+      display: none;
+    }
+  
+    .header__hamburger {
+      display: block;
+    }
+  
+    .header__nav {
+      width: 100%;
+    }
+  }

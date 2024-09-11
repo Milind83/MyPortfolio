@@ -1,0 +1,40 @@
+
+
+/* Default styling for footer */
+.footer {
+  background-color: #19202a; /* Dark background color */
+  color: #f8f8f8; /* Off-white text color */
+  padding: 20px; /* Padding around the footer */
+  text-align: center; /* Center align text */
+  font-size: 14px; /* Slightly smaller font size */
+  border-top: 1px solid #444; /* Subtle top border for separation */
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  border: none;
+}
+
+/* Styling for footer links */
+.footer a {
+  color: #f8f8f8; /* Off-white color for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .footer {
+    font-size: 12px; /* Slightly smaller font size on smaller screens */
+    padding: 15px; /* Reduced padding for smaller screens */
+    bottom: 0px;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 7px;
+}
+}

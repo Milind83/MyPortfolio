@@ -1,0 +1,162 @@
+.home {
+    /* position: absolute; */
+}
+
+.home_container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 5rem 0px;
+    flex-wrap: wrap;
+    /* gap: 10rem; */
+}
+
+.home_image {
+    height: 605px;
+}
+
+.home_image img {
+    width: 605px;
+    height: 605px;
+}
+
+.home_intro {
+    position: relative;
+    padding-top: 8rem;
+    width: 650px;
+}
+
+.home_intro .name {
+    font-size: 4rem;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+.home_intro h1 {
+    font-size: 4rem;
+}
+
+.home_intro h2 {
+    font-size: 3rem;
+}
+
+.home_intro h3 {
+    font-size: 2rem;
+}
+
+.content {
+    position: relative;
+    height: 5rem;
+    /* overflow: hidden; */
+    top: 20px;
+    font-size: 4rem;
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+.content__container__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.content__container__list__item {
+    text-align: left;
+    line-height: 40px;
+    height: 40px;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.content__container__list__item:nth-child(1) {
+    animation: showText 9s infinite;
+}
+
+.content__container__list__item:nth-child(2) {
+    animation: showText 9s infinite 3s;
+}
+
+.content__container__list__item:nth-child(3) {
+    animation: showText 9s infinite 6s;
+}
+
+@keyframes showText {
+
+    0%,
+    20% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    25%,
+    45% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.hire_me {
+    color: whitesmoke;
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .home_container {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 2rem 0rem;
+        flex-wrap: wrap;
+    }
+    .home_image {
+        height: 400px;
+    }
+    
+    .home_image img {
+        width: 400px;
+        height: 400px;
+    }
+    .home_intro {
+        position: relative;
+        padding-top: 2rem;
+        width: -webkit-fill-available;
+    }
+
+    .home_intro h3 {
+        font-size: 1.5rem;
+    }
+
+    .home_intro .name {
+        font-size: 3.3rem;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+    }
+    .content {
+        position: relative;
+        height: 5rem;
+        /* overflow: hidden; */
+        top: 20px;
+        font-size: 3.3rem;
+        color: #ecf0f1;
+        font-weight: 600;
+    }
+    .hire_me {
+        color: whitesmoke;
+        margin-top: 4rem;
+        padding: 20px;
+        border: 1px solid white;
+        border-radius: 4px;
+    }
+}

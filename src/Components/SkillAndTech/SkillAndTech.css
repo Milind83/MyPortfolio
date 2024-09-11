@@ -1,0 +1,53 @@
+#skill-tech{
+    height: auto;
+background-color: #0d141c;
+}
+.skill-tech {
+    /* width: 80%; */
+    margin: auto 8rem;
+    border-top: 2px solid #f5f5f5;
+    justify-content: center;
+}
+
+.skill-tech h2{
+    /* width: 80%; */
+    /* margin: auto 2rem; */
+    font-size: 4rem;
+}
+.skill-tech h3{
+    margin: 10px 0px;
+}
+.skill-tech p h5{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.skill-flipbox {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    #skill-tech{
+        height: auto;
+    background-color: #0d141c;
+    }
+    .skill-tech  {
+        width: 80%;
+        margin: auto 2rem;
+        justify-content: center;
+        border-top: 2px solid #f5f5f5;
+        
+    }
+    
+    .skill-tech h2{
+        width: 80%;
+        font-size: 4rem;
+    }
+    .skill-tech h3{
+        margin: 10px 0px;
+    }
+}

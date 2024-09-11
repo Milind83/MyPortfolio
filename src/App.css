@@ -1,0 +1,90 @@
+/* App.css */
+
+/* Default CSS for body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px; /* Set a base font size */
+  line-height: 1.5; /* Set a base line height for readability */
+  color: #F5F5F5; /* Set a default text color */
+  background-color: #f0f0f0; /* Light grey background color for the entire page */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Optional: Add some default styles for common elements */
+a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Remove default list styles */
+}
+
+button {
+  background-color: transparent; /* Default button background */
+  border: none; /* Remove default border */
+  padding: 0; /* Remove default padding */
+  font: inherit; /* Inherit font styles from parent */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+img {
+  max-width: 100%; /* Ensure images don't overflow their container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.vertical-scroll-container {
+  height: 100vh; /* Set a fixed height to make it scrollable */
+  /* Enable vertical scrolling */
+  overflow-y: scroll; 
+  /* Hide horizontal scrollbar, if any */
+  overflow-x: hidden; /* Hide horizontal scrollbar, if any */
+}
+
+.vertical-scroll-container::-webkit-scrollbar {
+  width: 0px; /* Width of the scrollbar */
+}
+
+.vertical-scroll-container::-webkit-scrollbar-track {
+  background: #0e121b; /* Background color of the track */
+}
+
+.vertical-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #333e4f; /* Color of the scrollbar handle */
+  border-radius: 5px; /* Rounded corners for the handle */
+  /* border: 3px solid #f1f1f1; Space around handle */
+}
+
+.vertical-scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: #333e4f; /* Color when hovering over the scrollbar handle */
+}
+
+
+.app{
+    width: 100%;
+    /* height: 100vh; */
+    background-image: url('/public/Images/BG-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.5); /* Optional overlay */
+  }
+
+
+
+
+
+  
