@@ -11,8 +11,10 @@ function FlipBox({logo,headingTag,headingText,pTag,pText}) {
                     <img src={logo} alt="Logo" title={headingText}/>
                 </div>
                 <div class="flip-box-back">
-                    <HTag className='flip-box-back-heading'>{headingText}</HTag>
+                    <div className='flip-box-back-container'>
+                        <HTag className='flip-box-back-heading'>{headingText}</HTag>
                     <PTag className='flip-box-back-para'>{pText}</PTag>
+                    </div>
                 </div>
             </div>
         </div>

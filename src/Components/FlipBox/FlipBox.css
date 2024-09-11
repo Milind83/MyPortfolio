@@ -42,7 +42,10 @@
     box-shadow: inset 0 8px 10px rgba(51,62,79);
     /* Inner shadow */
 }
-
+.flip-box-back-container {
+    margin: 35px 20px;
+    height: -webkit-fill-available;
+}
 /* Front side */
 .flip-box-front {
     background-color: #1a212b;
@@ -61,10 +64,6 @@
     color: white;
     display: flex;
     flex-direction: column;
-}
-
-p.flip-box-back-para {
-    margin: 50px;
 }
 
 /* Flip effect on hover */
