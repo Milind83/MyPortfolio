@@ -57,7 +57,7 @@ function App() {
       <div ref={skillRef}><SkillAndTech/></div>
       <div ref={projectsRef}><Projects/></div>
       <div><Footer/></div>
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
     </div>
   );
 }
