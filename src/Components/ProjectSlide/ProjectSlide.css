@@ -1,0 +1,244 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    /* background-color: #f4f4f4; */
+}
+
+.swiper {
+    width: 1245px;
+    /* Adjust the swiper width */
+    height: 300px;
+    /* Adjust the swiper height */
+    padding: 50px 0;
+}
+
+.slide-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d242e;
+    color: white;
+    font-size: 20px;
+    height: 270px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Customize active slide */
+.swiper-slide-active .slide-content {
+    transform: scale(1.2);
+    /* Make the middle slide larger */
+    transition: transform 0.3s;
+}
+
+/* Container for each slide */
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+    /* Required for 3D transforms */
+}
+
+/* Flip card wrapper */
+.flip-card-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    /* Consistent border-radius */
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+/* Flip card inner wrapper */
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 12px;
+    /* Keep the border-radius consistent */
+}
+
+/* Front and back sides */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: inherit;
+}
+
+.flip-card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: 76%;
+    margin-top: 48px;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #2b3038;
+    border-radius: 12px;
+    width: inherit;
+    height: 76%;
+    margin-top: 48px;
+    position: absolute;
+}
+
+/* Flip only on active widget */
+.swiper-slide-active .flip-card-wrapper:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    /* Flip effect */
+}
+
+/* Inactive slides are blurred */
+.swiper-slide:not(.swiper-slide-active) {
+    filter: blur(4px);
+    /* Apply blur */
+    pointer-events: none;
+    /* Disable interaction on inactive slides */
+}
+
+/* Active slide has no blur and can be interacted with */
+.swiper-slide-active {
+    filter: none;
+    pointer-events: auto;
+    /* Enable interaction */
+}
+
+.about-project {
+    font-size: 13px;
+    text-align: left;
+    padding: 0 20px;
+}
+button.show-site {
+    border: 1px solid whitesmoke;
+    padding: 0 10px;
+}
+
+button.show-site {
+    border: 1px solid whitesmoke;
+    padding: 5px;
+    color: whitesmoke;
+    font-size: 14px;
+}
+
+/* Specific styles for mobile and desktop */
+@media screen and (max-width: 768px) {
+    .flip-card-wrapper {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+    }
+
+    .flip-card-front img {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .flip-card-wrapper {
+        width: 350px;
+        height: 350px;
+        border-radius: 20px;
+    }
+
+    .swiper-slide-active .flip-card-wrapper {
+        width: 400px;
+        height: 400px;
+        /* Active slide is bigger */
+    }
+
+    .flip-card-front img {
+        width: 150px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .App {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+        /* background-color: #f4f4f4; */
+        /* width: 85%; */
+        margin: 0 auto;
+    }
+
+    .swiper {
+        width: 1245px;
+        /* Adjust the swiper width */
+        height: 558px;
+        /* Adjust the swiper height */
+        padding: 0 12px;
+    }
+
+    .slide-content {
+        height: 250px;
+        width: 250px;
+        /* Smaller slides on mobile */
+    }
+
+    /* Active slide styling for mobile */
+    .swiper-slide-active .slide-content {
+        height: 265px;
+        width: 265px;
+        /* Slightly larger for the active widget */
+        transform: scale(1.05);
+        /* Scale effect for mobile */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .swiper-slide.swiper-slide-prev {
+        margin-left: 10px;
+        margin-bottom: 0px !important;
+    }
+
+    .swiper-slide.swiper-slide-active {
+        margin-left: 4px;
+    }
+
+    .swiper-slide.swiper-slide-next {
+        margin-left: 10px;
+
+    }
+
+    .flip-card-front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: inherit;
+        height: inherit;
+        margin-top: 0px;
+    }
+
+    .flip-card-back {
+        transform: rotateY(180deg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: #2b3038;
+        /* border-radius: 12px; */
+        /* width: inherit; */
+        height: inherit;
+        margin-top: 0px;
+        position: absolute;
+    }
+}

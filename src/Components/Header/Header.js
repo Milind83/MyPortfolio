@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import './Header.css';
-import Footer from '../Footer/Footer';
 
 function Header() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);

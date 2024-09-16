@@ -15,10 +15,12 @@ body {
 /* Optional: Add some default styles for common elements */
 a {
   text-decoration: none; /* Remove underline from links */
+  color: #F5F5F5;
 }
 
 a:hover {
-  text-decoration: underline; /* Underline links on hover */
+  text-decoration: none; /* Underline links on hover */
+  color: #F5F5F5;
 }
 
 h1, h2, h3, h4, h5, h6 {
