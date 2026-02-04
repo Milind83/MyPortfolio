@@ -5,7 +5,7 @@ function Home() {
         <div className='home'>
             <div className='home_container'>
                 <div className='home_intro'>
-                    <h3>Hello i'm</h3>
+                    <h3>Hello i am</h3>
                     <h1 className='name'>
                         Milind Khariwale
                     </h1>
